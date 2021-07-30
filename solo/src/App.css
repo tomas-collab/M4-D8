@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.App {
+  text-align: center;
+  background-color: #161616 !important;
+}
+footer{
+  color: white;
+  background-color: #161616;
+}
+.list-group{
+  background-color: #161616 !important;
+}
+h4{
+  text-align: left;
+  color: white;
+  margin-left: 24px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.list-group{
+  list-style: none;
+}
+.me-auto{
+  display: flex;
+    flex: 1;
+}
+.comment-text{
+  background-color: rgb(98, 69, 105) !important;
+  color: white;
+}
+.netflix{
+  position: relative;
+  right: 26px;
+  color: red;
+  font-weight: 600;
+}
+#navbar{
+  background-color: #161616 !important;
+}
+.movie-title{
+  color: white;
+  text-overflow: ellipsis;
+  width: 188px;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: black;
+}
+.button{
+  background-color: black;
+  border: none;
+}
