@@ -5,6 +5,7 @@ import Movie from './components/Movie'
 import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 import { Component } from 'react';
+import {BrowserRouter as Router,Route } from 'react-router-dom'
 
 
 class App extends Component {
@@ -16,33 +17,16 @@ onSearchMovie=(e)=>{
 }
 render(){
   return (
+    <Router>
     <div className="App">
-      <Navigation onSearchMovie={this.onSearchMovie} search={this.state.search}
-      />
-      <h4>Trending Now</h4>
-      <Carousel>
-        <Movie movieData={this.state.search}/>
-        <Movie movieData={this.state.search}/>
-        <Movie movieData={this.state.search}/>
-        <Movie movieData={this.state.search}/>
-      </Carousel>
-      <h4>Watch It Again</h4>
-      <Carousel>
-        <Movie movieData="Spider man"/>
-        <Movie movieData="Spider man"/>
-        <Movie movieData="Spider man"/>
-        <Movie movieData="Spider man"/>
-      </Carousel>
-      <h4>New Releases</h4>
-      <Carousel>
-        <Movie movieData="Spider man"/>
-        <Movie movieData="Spider man"/>
-        <Movie movieData="Spider man"/>
-        <Movie movieData="Spider man"/>
-      </Carousel>
+      <Navigation onSearchMovie={this.onSearchMovie} search={this.state.search}/>
+        <Route path='/' exact render={(routerProps)=> <Carousel><Movie {...routerProps} movieData={this.state.search} title='Trending Now'/></Carousel>}/>
+        <Route path='/' exact render={(routerProps)=> <Carousel><Movie {...routerProps} movieData="Spider man" title='Watch It Again'/></Carousel>}/>   
+        <Route path='/' exact render={(routerProps)=> <Carousel><Movie {...routerProps} movieData="Spider man" title='New Releases'/></Carousel>}/>
+      {/* <Route path='/details/:ID' component={ShowDetails}/> */}
       <Footer/>
-
     </div>
+    </Router>
   );
  }
 }

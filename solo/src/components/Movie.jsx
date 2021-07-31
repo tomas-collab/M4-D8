@@ -2,7 +2,7 @@ import { Component } from "react";
 import MoviesSingle from "./MovieSingle";
 import Error from "./Error";
 import Loading from "./Loading";
-import {Row,Col} from 'react-bootstrap'
+import {Row,Col, Container} from 'react-bootstrap'
 
 
 
@@ -63,22 +63,26 @@ class Movie extends Component{
         const { isLoading, isError, movieData } = this.state
         return(
              
+                 
                  <> 
-                  
+                   
                     { isLoading && <Loading />}
                     { isError   && <Error   />}
-                     {
-                        movieData && movieData.map(movie=>
-                            <>
-                              <Row>
+                   
+            
+                    <h4 className='d-flex'>{this.props.title} </h4>
+            
+                 { 
+                         movieData && movieData.map(movie=>
+                                <Row>
+                                 
                                   <Col sm={12} md={3} lg={2}>
                                       <MoviesSingle allMovies={movie}/>
                                   </Col>
-                              </Row>
-                                
-                              </>
-                           ) 
-                     }
+                            </Row>
+                                ) 
+                            }
+                          
                 
              </>
         )
