@@ -14,7 +14,7 @@ const MoviesSingle =({allMovies, history})=>{
    
         return(
             
-            <div  className='ml-2' >
+            <div  className='ml-2' onClick={()=>history.push('/details/'+imdbID)}>
                  
               <img src={Poster}
                 style={{height:200, width:200}}/>

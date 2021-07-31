@@ -5,7 +5,7 @@ const MovieDetails=({movie,comment})=>{
     return(
      <div>
          <img src={movie.Poster} alt="" />
-         <p>{movie.Title}</p>
+         <p className='text-white'>{movie.Title}</p>
          <ul>
              {comment.map(c=> <li>{c.comment}</li> )}
          </ul>

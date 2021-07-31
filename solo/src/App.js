@@ -27,7 +27,7 @@ render(){
         <Route path='/' exact render={(routerProps)=> <Carousel><Movie {...routerProps} movieData="Spider man" title='Watch It Again'/></Carousel>}/>   
         <Route path='/' exact render={(routerProps)=> <Carousel><Movie {...routerProps} movieData="Spider man" title='New Releases'/></Carousel>}/>
         <Route path='/details/:movieID' render={(routerProps)=><ShowDetails {...routerProps}/>}/>
-    
+       <Footer/>
     </Router>
     </div>
   );

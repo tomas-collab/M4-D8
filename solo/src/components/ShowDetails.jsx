@@ -11,20 +11,18 @@ const ShowDetails=({match})=>{
             const getMovies= async()=>{
                 let id = match.params.movieID
                 if(id){
-                    const resp = await fetch('http://www.omdbapi.com/?apikey=27d75181&s='+id)
+                    const resp = await fetch('http://www.omdbapi.com/?apikey=27d75181&i='+id)
                     if(resp.ok){    
                         let MovieData = await resp.json()
-                        console.log(MovieData.Search,'moviedata')                     
-                setMovies(MovieData.Search)
+                        console.log(MovieData,'moviedata')                     
+                setMovies(MovieData)
                      
                  }else{
                      console.log('error in fetching')
                  }
-                }
-        
+                }            
+            }
             getMovies()
-       
-        }
     },[match.params.movieId] )
 
     
