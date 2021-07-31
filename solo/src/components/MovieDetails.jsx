@@ -1,6 +1,7 @@
 
 
 const MovieDetails=({movie,comment})=>{
+    console.log(movie,'movie')
     return(
      <div>
          <img src={movie.Poster} alt="" />

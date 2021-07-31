@@ -22,7 +22,7 @@ class Movie extends Component{
                 let response = await fetch('http://www.omdbapi.com/?apikey=27d75181&s=' + this.props.movieData,  )
                 if (response.ok) {
                     let movieData = await response.json()
-                    console.log(movieData,'movie data')
+                    
                     this.setState({ 
                         movieData: movieData.Search, 
                         isLoading: false, 
@@ -44,7 +44,7 @@ class Movie extends Component{
             let response = await fetch('http://www.omdbapi.com/?apikey=27d75181&s=' + this.props.movieData,  )
             if (response.ok) {
                 let movieData = await response.json()
-                console.log(movieData,'movie data')
+                
                 this.setState({ 
                     movieData: movieData.Search, 
                     isLoading: false, 

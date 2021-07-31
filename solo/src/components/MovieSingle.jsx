@@ -3,9 +3,10 @@ import {Popover,OverlayTrigger,Button} from 'react-bootstrap'
 import CommentForm from './CommentForm';
 import CommentList from "./CommentList";
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 
 
-const MoviesSingle =({allMovies})=>{
+const MoviesSingle =({allMovies, history})=>{
 
 
    const { Poster, Title, imdbID } = allMovies
@@ -13,10 +14,10 @@ const MoviesSingle =({allMovies})=>{
    
         return(
             
-            <div  className='ml-2'  onClick={()=>allMovies.history.push('details/'+imdbID)}>
-                <img src={Poster}
+            <div  className='ml-2' >
+                 
+              <img src={Poster}
                 style={{height:200, width:200}}/>
-               
             <OverlayTrigger
             className='comment-text'
                             trigger="click"
