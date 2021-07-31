@@ -62,21 +62,20 @@ class Movie extends Component{
     render(){
         const { isLoading, isError, movieData } = this.state
         return(
-             
-                 
-                 <> 
+              
+            <> 
+            <h4 className=''>{this.props.title} </h4>
                    
                     { isLoading && <Loading />}
                     { isError   && <Error   />}
                    
             
-                    <h4 className='d-flex'>{this.props.title} </h4>
+                   
             
                  {      
                          movieData && movieData.map(movie=>
                                    
-                            <Row>
-                                 
+                            <Row>                                
                                   <Col sm={12} md={3} lg={2}>
                                       <MoviesSingle allMovies={movie}/>
                                   </Col>
@@ -86,6 +85,7 @@ class Movie extends Component{
                           
                 
              </>
+           
         )
     }
 }

@@ -119,3 +119,10 @@ h4{
   background-color: black;
   border: none;
 }
+.detail-info{
+  padding-inline: 4rem;
+  margin: auto;
+  text-overflow: ellipsis;
+  width: 29rem;
+  justify-content: flex-end;
+}

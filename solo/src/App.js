@@ -22,10 +22,30 @@ render(){
     <div className="App">
     <Router>
       <Navigation onSearchMovie={this.onSearchMovie} search={this.state.search}/>
-       
-        <Route path='/' exact render={(routerProps)=> <Carousel><Movie {...routerProps} movieData={this.state.search} title='Trending Now'/></Carousel>}/>
-        <Route path='/' exact render={(routerProps)=> <Carousel><Movie {...routerProps} movieData="Spider man" title='Watch It Again'/></Carousel>}/>   
-        <Route path='/' exact render={(routerProps)=> <Carousel><Movie {...routerProps} movieData="Spider man" title='New Releases'/></Carousel>}/>
+      <Route path='/' exact render={(routerProps)=><h4>Trending Now</h4>}/>
+        <Route path='/' exact render={(routerProps)=> <Carousel>
+          <Movie {...routerProps} movieData={this.state.search}/>
+          <Movie {...routerProps} movieData={this.state.search}/>
+          <Movie {...routerProps} movieData={this.state.search}/>
+          <Movie {...routerProps} movieData={this.state.search}/>
+          <Movie {...routerProps} movieData={this.state.search}/>
+          </Carousel>}/>
+         <Route path='/' exact render={(routerProps)=><h4>Watch It Again</h4>}/>
+        <Route path='/' exact render={(routerProps)=> <Carousel> 
+          <Movie {...routerProps} movieData="Spider man" />
+          <Movie {...routerProps} movieData="Spider man" />
+          <Movie {...routerProps} movieData="Spider man" />
+          <Movie {...routerProps} movieData="Spider man" />
+          <Movie {...routerProps} movieData="Spider man" />
+          </Carousel>}/>  
+          <Route path='/' exact render={(routerProps)=><h4>New Releases</h4>}/> 
+        <Route path='/' exact render={(routerProps)=> <Carousel>
+          <Movie {...routerProps} movieData="Spider man" />
+          <Movie {...routerProps} movieData="Spider man" />
+          <Movie {...routerProps} movieData="Spider man" />
+          <Movie {...routerProps} movieData="Spider man" />
+          <Movie {...routerProps} movieData="Spider man" />
+          </Carousel>}/>
         <Route path='/details/:movieID' render={(routerProps)=><ShowDetails {...routerProps}/>}/>
        <Footer/>
     </Router>

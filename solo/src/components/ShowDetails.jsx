@@ -35,7 +35,7 @@ const ShowDetails=({match})=>{
                     headers:{"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRlZmQzZTBiYzMyYzAwMTUxZDUxNTgiLCJpYXQiOjE2MjczMTA0NDcsImV4cCI6MTYyODUyMDA0N30.2K33AKXN_oIYCcmEkHSYvPThUZK7rwxNLcVdpB19HT4"}
                 })
                 let commentData = await response.json()
-                console.log(commentData,'new comment')
+                console.log(commentData,'commentData')
                  setComment(commentData)
             }
     }

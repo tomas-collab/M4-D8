@@ -1,14 +1,13 @@
-
+import {StarRatings} from 'react-star-ratings'
 
 const MovieDetails=({movie,comment})=>{
     console.log(movie,'movie')
     return(
-     <div>
+     <div className='text-white detail-info'>
          <img src={movie.Poster} alt="" />
-         <p className='text-white'>{movie.Title}</p>
-         <ul>
-             {comment.map(c=> <li>{c.comment}</li> )}
-         </ul>
+         <p >{movie.Title}</p>
+         <p className='here'>Summary: {movie.Plot}</p>
+         <p>Aired Date: {movie.Released}</p>
      </div>
     )
 }
