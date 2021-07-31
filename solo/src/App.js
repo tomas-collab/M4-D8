@@ -12,7 +12,7 @@ import MovieSingle from './components/MovieSingle';
 
 class App extends Component {
 state = {
-  search:'home'
+  search:'home alone'
 }
 onSearchMovie=(e)=>{
    this.setState({search:e.target.value})

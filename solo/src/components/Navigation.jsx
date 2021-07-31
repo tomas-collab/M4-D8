@@ -1,9 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
-import { Nav,Container,Navbar, FormControl, NavDropdown } from 'react-bootstrap';
+import { Nav,Container,Navbar,  FormControl, NavDropdown } from 'react-bootstrap';
 import {BsBell} from 'react-icons/bs'
 import {MdFace} from 'react-icons/md'
-
+import { Link, NavLink } from 'react-router-dom';
 class Navigation extends Component {
     render(){
     return ( 
@@ -13,7 +13,7 @@ class Navigation extends Component {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="#features">Home</Nav.Link>
+      <Link to='/' > <Nav.Link href="#pricing">Home</Nav.Link></Link>
       <Nav.Link href="#pricing">Tv Shows</Nav.Link>
       <Nav.Link href="#deets">Movies</Nav.Link>
       <Nav.Link href="#deets">Recently Added</Nav.Link>
