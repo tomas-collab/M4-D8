@@ -8,6 +8,7 @@ import { Component } from 'react';
 import {BrowserRouter as Router, Route } from 'react-router-dom'
 import ShowDetails from './components/ShowDetails';
 import MovieSingle from './components/MovieSingle';
+import TvShows from './components/TvShows';
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ render(){
     <div className="App">
     <Router>
       <Navigation onSearchMovie={this.onSearchMovie} search={this.state.search}/>
+      <Route path='/tvShows' render={(routerProps)=><TvShows series='the office' {...routerProps}/>}/>
       <Route path='/' exact render={(routerProps)=><h4>Trending Now</h4>}/>
         <Route path='/' exact render={(routerProps)=> <Carousel>
           <Movie {...routerProps} movieData={this.state.search}/>
