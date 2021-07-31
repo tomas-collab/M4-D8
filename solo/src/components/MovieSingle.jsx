@@ -2,6 +2,7 @@
 import {Popover,OverlayTrigger,Button} from 'react-bootstrap'
 import CommentForm from './CommentForm';
 import CommentList from "./CommentList";
+import { withRouter } from 'react-router';
 
 
 const MoviesSingle =({allMovies})=>{
@@ -12,7 +13,7 @@ const MoviesSingle =({allMovies})=>{
    
         return(
             
-            <div  className='ml-2' >
+            <div  className='ml-2'  onClick={()=>allMovies.history.push('details/'+imdbID)}>
                 <img src={Poster}
                 style={{height:200, width:200}}/>
                
@@ -41,6 +42,6 @@ const MoviesSingle =({allMovies})=>{
         )
   
 }
-export default MoviesSingle
+export default withRouter(MoviesSingle)
 
 

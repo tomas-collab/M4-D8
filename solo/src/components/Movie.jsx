@@ -22,7 +22,7 @@ class Movie extends Component{
                 let response = await fetch('http://www.omdbapi.com/?apikey=27d75181&s=' + this.props.movieData,  )
                 if (response.ok) {
                     let movieData = await response.json()
-                    
+                    console.log(movieData,'movie data')
                     this.setState({ 
                         movieData: movieData.Search, 
                         isLoading: false, 
@@ -72,9 +72,10 @@ class Movie extends Component{
             
                     <h4 className='d-flex'>{this.props.title} </h4>
             
-                 { 
+                 {      
                          movieData && movieData.map(movie=>
-                                <Row>
+                                   
+                            <Row>
                                  
                                   <Col sm={12} md={3} lg={2}>
                                       <MoviesSingle allMovies={movie}/>
