@@ -6,7 +6,7 @@ const [movies, setMovies] = useState([])
 console.log('moviesss',movies)
     useEffect(() => {
         const getMovie=async()=>{
-            let response= await fetch(`http://www.omdbapi.com/?apikey=27d75181?s=`+props.title)
+            let response= await fetch(`http://www.omdbapi.com/?apikey=27d75181&s=`+props.title)
             if(response.ok){
                 let movieData= await response.json()
                  setMovies(movieData)

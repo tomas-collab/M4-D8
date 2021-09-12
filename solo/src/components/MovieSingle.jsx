@@ -16,8 +16,11 @@ const MoviesSingle =({allMovies, history})=>{
             
             <div  className='ml-2' >
                  
-              <img onClick={()=>history.push('/details/'+imdbID)} src={Poster}
-                style={{height:200, width:200}}/>
+              <img 
+                   onClick={()=>history.push('/details/'+imdbID)} 
+                   src={Poster}
+                   style={{height:200, width:200}}
+                />
             <OverlayTrigger
             className='comment-text'
                             trigger="click"
