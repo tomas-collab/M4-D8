@@ -1,23 +1,27 @@
-import { useEffect } from "react"
+import { useEffect,useState } from "react"
 import { Link } from "react-router-dom"
-const TvShows=({match,series})=>{ 
-const [series, setSeries] = useState([])
+
+const TvShows=({title})=>{ 
+const [movies, setMovies] = useState([])
     useEffect(() => {
-        series= match.params.type
+       
         const getMovie=async()=>{
-            let response= await fetch(`http://www.omdbapi.com/?apikey=27d75181?s=${series}'&type=series`)
+            let response= await fetch(`http://www.omdbapi.com/?apikey=27d75181?s=${title}&type=series`)
             if(response.ok){
                 let movieData= await response.json()
-                 setSeries(movieData)
+                 setMovies(movieData)
+            }else{
+                console.log('not working ')
             }
         }
-    }, [match.params.type])
+    }, [])
+    console.log('moviesss',movies)
     return(
-        <Link to='/tvShow'>
+       
          <div>
-             <img src="https.placeholde.it/120x120" alt="" />
+             <img src={movies.Poster} />
          </div>
-        </Link>
+      
     )
 }
 

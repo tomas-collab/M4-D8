@@ -23,9 +23,10 @@ render(){
     <div className="App">
     <Router>
       <Navigation onSearchMovie={this.onSearchMovie} search={this.state.search}/>
-      <Route path='/tvShows' render={(routerProps)=><TvShows series='the office' {...routerProps}/>}/>
+      <Route path='/tvShows' render={(routerProps)=><TvShows {...routerProps} title='blacklist' />}/>
       <Route path='/' exact render={(routerProps)=><h4>Trending Now</h4>}/>
-        <Route path='/' exact render={(routerProps)=> <Carousel>
+        <Route path='/' exact render={(routerProps)=>
+           <Carousel>
           <Movie {...routerProps} movieData={this.state.search}/>
           <Movie {...routerProps} movieData={this.state.search}/>
           <Movie {...routerProps} movieData={this.state.search}/>
@@ -33,7 +34,8 @@ render(){
           <Movie {...routerProps} movieData={this.state.search}/>
           </Carousel>}/>
          <Route path='/' exact render={(routerProps)=><h4>Watch It Again</h4>}/>
-        <Route path='/' exact render={(routerProps)=> <Carousel> 
+        <Route path='/' exact render={(routerProps)=>
+           <Carousel> 
           <Movie {...routerProps} movieData="Spider man" />
           <Movie {...routerProps} movieData="Spider man" />
           <Movie {...routerProps} movieData="Spider man" />
@@ -41,7 +43,8 @@ render(){
           <Movie {...routerProps} movieData="Spider man" />
           </Carousel>}/>  
           <Route path='/' exact render={(routerProps)=><h4>New Releases</h4>}/> 
-        <Route path='/' exact render={(routerProps)=> <Carousel>
+        <Route path='/' exact render={(routerProps)=> 
+          <Carousel>
           <Movie {...routerProps} movieData="Spider man" />
           <Movie {...routerProps} movieData="Spider man" />
           <Movie {...routerProps} movieData="Spider man" />
