@@ -23,7 +23,9 @@ render(){
     <div className="App">
     <Router>
       <Navigation onSearchMovie={this.onSearchMovie} search={this.state.search}/>
-      <Route path='/tvShows' render={(routerProps)=><TvShows {...routerProps} title='blacklist' />}/>
+      <Route path='/tvShows' render={(routerProps)=>
+               <TvShows {...routerProps} title="blacklist" />}
+      />
       <Route path='/' exact render={(routerProps)=><h4>Trending Now</h4>}/>
         <Route path='/' exact render={(routerProps)=>
            <Carousel>
